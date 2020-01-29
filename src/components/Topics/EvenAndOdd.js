@@ -7,21 +7,19 @@ import React, { Component } from "react"
                     evenArray: [],
                     oddArray: [],
                     userInput: ''
-
                 }
-        }
+             }
 
         handleChange = (event) => {
             this.setState({
-                userInput: event.target.value
-            })
+                userInput: event.target.value })
 
         }
 
         setEvensAndOdds = () => {
             this.setState({ 
                 evenArray: this.state.userInput.split(',').filter(el => el % 2 === 0),
-                oddsArray: this.state.userInput.split(',').filter(el => el % 2 === 1)
+                oddArray: this.state.userInput.split(',').filter(el => el % 2 === 1)
 
             })
         }
